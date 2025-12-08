@@ -1,0 +1,264 @@
+/* style.css - استایل کامل فرم ثبت‌نام، شبیه Google Forms */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Vazirmatn", "Tahoma", sans-serif;
+  background-color: #f8f9fa;
+  color: #202124;
+  line-height: 1.6;
+  padding: 20px 0;
+  direction: rtl;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* هدر بنفش معروف Google Forms */
+.form-header {
+  background: linear-gradient(to bottom, #673ab7, #512da8);
+  color: white;
+  padding: 40px 32px;
+  text-align: center;
+}
+
+.form-header h1 {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.form-header .description {
+  font-size: 16px;
+  opacity: 0.95;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* پیام‌های موفقیت و خطا */
+.success-message,
+.error-message {
+  padding: 16px 32px;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px 32px;
+  border-radius: 8px;
+}
+
+.success-message {
+  background-color: #e6f4ea;
+  color: #137333;
+  border: 1px solid #a5d6a7;
+}
+
+.error-message {
+  background-color: #fce8e6;
+  color: #c5221f;
+  border: 1px solid #f28b82;
+}
+
+/* فیلدها */
+form {
+  padding: 32px;
+}
+
+.field-group {
+  margin-bottom: 32px;
+}
+
+.field-group.required label:first-child::after {
+  content: " *";
+  color: #c5221f;
+  font-weight: bold;
+}
+
+.field-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #202124;
+}
+
+/* ورودی‌های متنی */
+.field-group input[type="text"],
+.field-group input[type="email"],
+.field-group input[type="tel"] {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.field-group input:focus {
+  outline: none;
+  border-color: #673ab7;
+  box-shadow: 0 0 0 2px rgba(103, 58, 183, 0.2);
+}
+
+/* رادیو و چک‌باکس */
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-group label,
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.radio-group input[type="radio"],
+.checkbox-group input[type="checkbox"] {
+  margin-left: 12px; /* چون RTL هستیم، margin-left می‌شه سمت راست */
+  width: 20px;
+  height: 20px;
+  accent-color: #673ab7;
+}
+
+/* فیلد Other داینامیک */
+.other-field {
+  margin-top: 12px;
+}
+
+.other-field input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+}
+
+/* جعبه قوانین */
+.rules-box {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #dadce0;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.rules-box ol {
+  padding-right: 20px;
+}
+
+/* دکمه ارسال */
+.submit-button {
+  text-align: left;
+  margin-top: 32px;
+}
+
+.submit-button button {
+  background-color: #673ab7;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button button:hover {
+  background-color: #512da8;
+}
+
+/* ریسپانسیو */
+@media (max-width: 600px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 100vh;
+  }
+
+  .form-header {
+    padding: 32px 20px;
+  }
+
+  .form-header h1 {
+    font-size: 28px;
+  }
+
+  form {
+    padding: 24px 20px;
+  }
+
+  .field-group {
+    margin-bottom: 28px;
+  }
+
+  .success-message,
+  .error-message {
+    margin: 16px 20px;
+    padding: 14px 20px;
+  }
+}
+/* پیام موفقیت کامل */
+.success-box {
+  background-color: #f0f8ff;
+  border: 2px solid #673ab7;
+  border-radius: 12px;
+  padding: 32px;
+  margin: 32px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.success-box h2 {
+  font-size: 28px;
+  color: #673ab7;
+  margin-bottom: 24px;
+}
+
+.success-content p {
+  margin-bottom: 20px;
+  color: #202124;
+}
+
+.link-box {
+  background-color: white;
+  border: 1px solid #dadce0;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px auto;
+  max-width: 500px;
+  word-break: break-all;
+}
+
+.link-box a {
+  color: #1a0dab;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link-box a:hover {
+  text-decoration: underline;
+}
+
+.success-box strong {
+  color: #673ab7;
+  font-size: 18px;
+}
