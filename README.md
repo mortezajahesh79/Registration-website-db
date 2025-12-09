@@ -5,14 +5,6 @@ http://brightfuturela.de
 این وبسایتمونه
 
 
-## راه‌اندازی پروژه
-
-1. پروژه را در فولدر `www` سرور لوکال (Laragon/XAMPP) کپی کنید.
-2. MySQL را اجرا کنید.
-3. در phpMyAdmin دیتابیس `deutsch_class_web` بسازید.
-4. محتوای `database.sql` را اجرا کنید.
-5. فایل `config.php` را چک کنید (معمولاً نیازی به تغییر نیست).
-6. به آدرس `http://deutschClassWeb.test/` بروید.
 
 ## فایل‌ها
 
@@ -29,4 +21,5 @@ http://brightfuturela.de
 - چک تکراری ایمیل
 - امنیت پایه (PDO, sanitize)
 - validation کلاینت و سرور
+
 
